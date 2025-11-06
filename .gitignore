@@ -1,0 +1,6 @@
+# mise
+.mise
+
+# zig
+.zig-cache
+zig-out

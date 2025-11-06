@@ -1,0 +1,13 @@
+.{
+    .name = .exetest_example,
+    .version = "0.0.1",
+    .dependencies = .{
+        .exetest = .{
+            .url = "https://github.com/pyk/exetest/archive/main.tar.gz",
+            .hash = "exetest-0.0.1-A_rXWYVzAABj8cR1azr0QeVXSL6whiXK0sHljl9rwbNT",
+        },
+    },
+    .minimum_zig_version = "0.15.2",
+    .paths = .{""},
+    .fingerprint = 0xa5f8b5890d567f75,
+}

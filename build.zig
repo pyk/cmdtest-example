@@ -1,12 +1,12 @@
 const std = @import("std");
-const exetest = @import("exetest");
+const cmdtest = @import("cmdtest");
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
 
     // Your executable
     const exe = b.addExecutable(.{
-        .name = "exetest-example",
+        .name = "cmdtest-example",
         .root_module = b.createModule(.{
             .root_source_file = b.path("src/main.zig"),
             .target = target,
@@ -15,11 +15,11 @@ pub fn build(b: *std.Build) void {
     b.installArtifact(exe);
 
     // Register new test
-    const exe_test = exetest.add(b, .{
-        .name = "exetest-example",
-        .test_file = b.path("test/exetest-example.zig"),
+    const exe_test = cmdtest.add(b, .{
+        .name = "cmdtest-example",
+        .test_file = b.path("test/cmdtest-example.zig"),
     });
-    const echo_test = exetest.add(b, .{
+    const echo_test = cmdtest.add(b, .{
         .name = "echo",
         .test_file = b.path("test/echo.zig"),
     });

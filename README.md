@@ -1,5 +1,5 @@
 This is example of Zig project that uses
-[exetest](https://github.com/pyk/exetest).
+[cmdtest](https://github.com/pyk/cmdtest).
 
 1. Install Zig via mise (Optional)
 
@@ -19,12 +19,12 @@ This is example of Zig project that uses
    ```shell
    Build Summary: 8/8 steps succeeded; 3/3 tests passed
    test success
-   ├─ run test exetest-example 2 passed 1ms MaxRSS:2M
-   │  ├─ compile test exetest-example Debug native cached 9ms MaxRSS:39M
+   ├─ run test cmdtest-example 2 passed 2ms MaxRSS:2M
+   │  ├─ compile test cmdtest-example Debug native success 370ms MaxRSS:125M
    │  └─ install cached
-   │     └─ install exetest-example cached
-   │        └─ compile exe exetest-example Debug native cached 9ms MaxRSS:39M
+   │     └─ install cmdtest-example cached
+   │        └─ compile exe cmdtest-example Debug native cached 10ms MaxRSS:39M
    └─ run test echo 1 passed 1ms MaxRSS:2M
-      ├─ compile test echo Debug native cached 9ms MaxRSS:39M
+      ├─ compile test echo Debug native cached 9ms MaxRSS:38M
       └─ install (+1 more reused dependencies)
    ```

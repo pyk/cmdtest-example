@@ -3,8 +3,8 @@
     .version = "0.0.1",
     .dependencies = .{
         .cmdtest = .{
-            .url = "https://github.com/pyk/cmdtest/archive/main.tar.gz",
-            .hash = "cmdtest-0.2.0-j--Upt1_AACvUOL5DSAmZ3fXVwZsnqOgFe5F5Xz3oi-e",
+            .url = "https://github.com/pyk/cmdtest/archive/v0.2.0.tar.gz",
+            .hash = "cmdtest-0.2.0-j--Upt1_AAAR5fdDGL8l-YlVLmKNQtYM9Fh-N-8zmisb",
         },
     },
     .minimum_zig_version = "0.15.2",

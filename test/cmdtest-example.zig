@@ -4,7 +4,7 @@ const testing = std.testing;
 
 test "via exe name" {
     const argv = &[_][]const u8{"cmdtest-example"};
-    var result = try cmdtest.run(.{ .argv = argv });
+    var result = try cmdtest.run(testing.io, .{ .argv = argv });
     defer result.deinit();
 
     try testing.expectEqualStrings("project-exe\n", result.stderr);
@@ -12,7 +12,7 @@ test "via exe name" {
 
 test "via path" {
     const argv = &[_][]const u8{"./zig-out/bin/cmdtest-example"};
-    var result = try cmdtest.run(.{ .argv = argv });
+    var result = try cmdtest.run(testing.io, .{ .argv = argv });
     defer result.deinit();
 
     try testing.expectEqualStrings("project-exe\n", result.stderr);

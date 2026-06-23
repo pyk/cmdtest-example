@@ -4,7 +4,7 @@ const testing = std.testing;
 
 test "echo" {
     const argv = &[_][]const u8{ "echo", "hello" };
-    var result = try cmdtest.run(.{ .argv = argv });
+    var result = try cmdtest.run(testing.io, .{ .argv = argv });
     defer result.deinit();
 
     try testing.expectEqualStrings("hello\n", result.stdout);
